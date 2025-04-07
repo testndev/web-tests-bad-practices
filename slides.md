@@ -80,6 +80,29 @@ level: 2
 ---
 layout: default
 transition: fade
+---
+
+# Bad practice 1: ???
+
+
+<<< @/tests/01-without-verification.spec.ts {*|9}{lines:true}
+
+---
+layout: default
+transition: fade
+---
+
+# Bad practice 1: missing verification after action
+
+<<< @/tests/01-with-verification.spec.ts {*|9}{lines:true}
+
+## 👉 Every action should be followed by a verification
+
+...
+
+---
+layout: default
+transition: fade
 
 ---
 
