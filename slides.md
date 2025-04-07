@@ -104,13 +104,15 @@ Avoid repeated block of code for setup (`beforeAll()`, `beforeEach()`)
 
 # Bad practice 10: ???
 
-<<< @/tests/10-no-web-assertions.spec.ts {*|3-10}{lines:true}
+<<< @/tests/10-no-web-assertions.spec.ts {*|8}{lines:true}
 
 ---
 
 # Bad practice 10: No web-first assertions
 
-<<< @/tests/10-web-assertions.spec.ts {*|3-10}{lines:true}
+<<< @/tests/10-web-assertions.spec.ts {*|8}{lines:true}
+
+<v-clicks>
 
 ## 👉 Use web first assertions
 
@@ -121,6 +123,7 @@ By using web first assertions Playwright (or Cypress) will wait until the expect
 For example, when testing an alert message, a test would click a button that makes a message appear and check that the alert message is there.
 
 If the alert message takes half a second to appear, assertions such as `toBeVisible()` will wait and retry if needed.
+</v-clicks>
 
 <!--
 toto
