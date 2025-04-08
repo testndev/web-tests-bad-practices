@@ -144,6 +144,43 @@ Last step should be a verification.
 layout: default
 transition: fade
 ---
+# Bad practice 1: ???
+
+<<< @/tests/locator-bad.spec.ts {*|8,9,11}{lines:true}
+
+---
+layout: default
+transition: fade
+---
+
+# Bad practice 1: fragile locators
+
+<<< @/tests/locator-good.spec.ts {*|8,9,11}{lines:true}
+
+---
+layout: default
+transition: fade
+
+---
+
+# Bad practice 2: ???
+
+<<< @/tests/wait-bad.spec.ts {*|11,23}{lines:true}
+
+---
+layout: default
+transition: fade
+---
+
+# Bad practice 2: dumb wait
+
+<<< @/tests/wait-good.spec.ts {*|12-13,19-20,27}{lines:true}
+
+---
+layout: default
+transition: fade
+
+---
 
 # Bad practice 9: ???
 
