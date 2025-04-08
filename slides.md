@@ -160,7 +160,6 @@ transition: fade
 ---
 layout: default
 transition: fade
-
 ---
 
 # Bad practice 2: ???
@@ -179,7 +178,28 @@ transition: fade
 ---
 layout: default
 transition: fade
+---
 
+# Bad practice 3: ???
+
+<<< @/tests/page-object-bad.spec.ts {*|6-11, 15-20}{lines:true}
+
+---
+layout: two-cols
+transition: fade
+---
+
+# Bad practice 3: repeat business logic
+
+<<< @/tests/page-object-good.spec.ts {*|7-12, 16-21}{lines:true}
+
+::right::
+
+<<< @/tests/page-object.ts {*|6,10,14,18}{lines:true}
+
+---
+layout: default
+transition: fade
 ---
 
 # Bad practice 9: ???
