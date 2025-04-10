@@ -24,8 +24,7 @@ Other missing dependencies (slidev, Playwright, Cypress) will be installed with 
 
 #### Add new executable examples
 
-in in [`tests`](./tests) directory, add as many files as needed, at least:
-- 1 file with the example of bad practice you want to present
+in [`tests`](./tests) directory, add as many files as needed, at least:
 - 1 file with a better solution
 
 #### Add new slide:
