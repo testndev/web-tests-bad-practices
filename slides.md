@@ -5,7 +5,7 @@ theme: default
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: https://unsplash.com/collections/94734566/slidev
 # some information about your slides (markdown enabled)
-title: Bad practices d'écriture des tests Cypress/Playwright
+title: (Cypress / Playwright) Web Tests bad practices
 info: |
   ## Slidev Starter Template
   Presentation slides for developers.
@@ -72,6 +72,8 @@ transition: slide-up
 level: 2
 
 ---
+hideInToc: true
+---
 
 # Table of contents
 
@@ -91,6 +93,8 @@ transition: fade
 layout: default
 transition: fade
 ---
+hideInToc: true
+---
 
 # Bad practice 9: repeated setup
 
@@ -102,10 +106,12 @@ Avoid repeated block of code for setup (`beforeAll()`, `beforeEach()`)
 
 ---
 
-# Bad practice 10: ???
+# Bad practice 10
 
 <<< @/tests/10-no-web-assertions.spec.ts {*|3-10}{lines:true}
 
+---
+hideInToc: true
 ---
 
 # Bad practice 10: No web-first assertions
