@@ -45,11 +45,9 @@ transition: fade-out
 
 # Intro
 
-Nous allons évoquer quelques mauvaises pratiques (et autres pièges à éviter) lors de la conception et l’implémentation de vos tests avec Cypress ou Playwright.
+We will present some bad practices (and other pitfalls to avoid) while designing and implementing your tests with Cypress or Playwright.
 
-Certains points seront spécifiques à ces frameworks, d’autre seront communs à tout framework de tests.
-
-Le sujet sera interactif, nous attendons vos avis et retours d’expériences.
+Some points will be specific to these frameworks, others will be common to any testing framework.
 
 <style>
 h1 {
@@ -70,7 +68,6 @@ Here is another comment.
 ---
 transition: slide-up
 level: 2
-
 ---
 
 # Table of contents
@@ -78,31 +75,45 @@ level: 2
 <Toc text-sm minDepth="1" maxDepth="2" />
 
 ---
-layout: default
-transition: fade
----
 
-# Bad practice 1: ???
+# Bad practice 4
 
+````md magic-move`
 
-<<< @/tests/01-without-verification.spec.ts {*|9}{lines:true}
+```ts
+import { expect, test } from "@playwright/test";
 
----
-layout: default
-transition: fade
----
+test("Sign in to GitHub - available from main page 👎", async ({ page }) => {
+  await page.goto("https://github.com");
+  const signInButton = page.getByRole('link', { name: 'Sign in' });
+  await expect(signInButton).toBeVisible();
+  await signInButton.click();
+});
+```
 
-# Bad practice 1: missing verification after action
+```ts
+import { expect, test } from "@playwright/test";
 
-<<< @/tests/01-with-verification.spec.ts {*|9}{lines:true}
+test("Sign in to GitHub - available from main page 👍", async ({ page }) => {
+  await page.goto("https://github.com");
+  const signInButton = page.getByRole('link', { name: 'Sign in' });
+  await expect(signInButton).toBeVisible();
+  await signInButton.click();
+  await expect(page).toHaveURL(/.*login/);
+});
+```
+````
+
+<v-clicks>
 
 ## 👉 Every action should be followed by a verification
 
-...
+A test block should contain one or more actions and verifications.
 
----
-layout: default
-transition: fade
+Last step should be a verification.
+
+</v-clicks>
+
 
 ---
 
@@ -110,9 +121,6 @@ transition: fade
 
 <<< @/tests/09-repeated.spec.ts {*|5-10,15-20}{lines:true}
 
----
-layout: default
-transition: fade
 ---
 
 # Bad practice 9: repeated setup
@@ -163,7 +171,7 @@ class: text-left
 Common:
 - fragile selectors
 - Hard breaks 
-- too weak assertions 
+- too weak assertions
 - All code in the same file
 - Code duplication in multiple files
 - Same dataset shared with multiple tests
@@ -197,12 +205,11 @@ Cypress:
 - https://www.browserstack.com/guide/cypress-best-practices
 - https://www.checklyhq.com/learn/playwright/assertions/
 - https://www.checklyhq.com/learn/playwright/writing-tests/
+- https://www.brandonpugh.com/better-way/development-guidelines/testing/good-vs-bad-tests.html
 
 ---
-
 layout: center
 class: text-center
-
 ---
 
 # Learn More
