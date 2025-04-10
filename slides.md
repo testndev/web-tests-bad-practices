@@ -70,8 +70,6 @@ Here is another comment.
 ---
 transition: slide-up
 level: 2
-
----
 hideInToc: true
 ---
 
@@ -82,7 +80,6 @@ hideInToc: true
 ---
 layout: default
 transition: fade
-
 ---
 
 # Bad practice 9: ???
@@ -92,7 +89,6 @@ transition: fade
 ---
 layout: default
 transition: fade
----
 hideInToc: true
 ---
 
@@ -179,14 +175,10 @@ Cypress:
 - https://www.checklyhq.com/learn/playwright/writing-tests/
 
 ---
-
 layout: center
 class: text-center
-
 ---
 
-# Learn More
-
-[Documentation](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/resources/showcases)
+# Thank you
 
 <PoweredBySlidev mt-10 />

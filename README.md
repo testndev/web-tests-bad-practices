@@ -36,5 +36,4 @@ To start the slide show:
 - `pnpm dev`
 - visit <http://localhost:3030>
 
-See https://sli.dev/guide/ documentation for more information
-
+For more information about Slidev: [Documentation](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/resources/showcases)
