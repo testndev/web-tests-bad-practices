@@ -5,7 +5,9 @@
   "scripts": {
     "build": "slidev build",
     "dev": "slidev --open",
-    "export": "slidev export"
+    "export": "slidev export",
+    "test:playwright": "npx playwright test",
+    "test:cypress": "cypress open --e2e -b electron --config-file cypress.config.js"
   },
   "dependencies": {
     "@playwright/test": "^1.51.1",
@@ -17,6 +19,7 @@
     "vue": "^3.5.13"
   },
   "devDependencies": {
-    "playwright-chromium": "^1.51.1"
+    "playwright-chromium": "^1.51.1",
+    "typescript": "^5.8.3"
   }
 }
