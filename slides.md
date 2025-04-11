@@ -75,6 +75,31 @@ hideInToc: true
 
 <Toc text-sm minDepth="1" maxDepth="2" />
 
+
+---
+
+# Bad practice 7
+
+<<< @/tests/07-dependent-tests.spec.ts {*|14,20-23}{lines:true}
+
+---
+hideInToc: true
+---
+
+# Bad practice 7: dependency between tests
+
+<<< @/tests/07-independent-tests.spec.ts {*|4-6|8-10,12,14|17,20,21,23,25,28,30|33,36,38,40,42|*}{lines:true,maxHeight:'260px' }
+
+<v-clicks>
+
+### 👉 Isolate each of your tests
+
+Tests should not depend on the state of previous tests or test runs to avoid flaky tests. 
+
+Each test should run independently, setting up its own state and cleaning up after itself. This ensures that tests can be run in any order and still pass, which is crucial for reliable test suites.
+</v-clicks>
+
+
 ---
 
 # Bad practice 4
