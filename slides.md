@@ -45,11 +45,9 @@ transition: fade-out
 
 # Intro
 
-Nous allons évoquer quelques mauvaises pratiques (et autres pièges à éviter) lors de la conception et l’implémentation de vos tests avec Cypress ou Playwright.
+We will present some bad practices (and other pitfalls to avoid) while designing and implementing your tests with Cypress or Playwright.
 
-Certains points seront spécifiques à ces frameworks, d’autre seront communs à tout framework de tests.
-
-Le sujet sera interactif, nous attendons vos avis et retours d’expériences.
+Some points will be specific to these frameworks, others will be common to any testing framework.
 
 <style>
 h1 {
@@ -78,6 +76,46 @@ hideInToc: true
 <Toc text-sm minDepth="1" maxDepth="2" />
 
 ---
+
+# Bad practice 4
+
+````md magic-move`
+
+```ts
+import { expect, test } from "@playwright/test";
+
+test("Sign in to GitHub - available from main page 👎", async ({ page }) => {
+  await page.goto("https://github.com");
+  const signInButton = page.getByRole('link', { name: 'Sign in' });
+  await expect(signInButton).toBeVisible();
+  await signInButton.click();
+});
+```
+
+```ts
+import { expect, test } from "@playwright/test";
+
+test("Sign in to GitHub - available from main page 👍", async ({ page }) => {
+  await page.goto("https://github.com");
+  const signInButton = page.getByRole('link', { name: 'Sign in' });
+  await expect(signInButton).toBeVisible();
+  await signInButton.click();
+  await expect(page).toHaveURL(/.*login/);
+});
+```
+````
+
+<v-clicks>
+
+## 👉 Every action should be followed by a verification
+
+A test block should contain one or more actions and verifications.
+
+Last step should be a verification.
+
+</v-clicks>
+
+---
 layout: default
 transition: fade
 ---
@@ -104,7 +142,7 @@ Avoid repeated block of code for setup (`beforeAll()`, `beforeEach()`)
 
 # Bad practice 10
 
-<<< @/tests/10-no-web-assertions.spec.ts {*|3-10}{lines:true}
+<<< @/tests/10-no-web-assertions.spec.ts {*|8}{lines:true}
 
 ---
 hideInToc: true
@@ -112,7 +150,9 @@ hideInToc: true
 
 # Bad practice 10: No web-first assertions
 
-<<< @/tests/10-web-assertions.spec.ts {*|3-10}{lines:true}
+<<< @/tests/10-web-assertions.spec.ts {*|8}{lines:true}
+
+<v-clicks>
 
 ## 👉 Use web first assertions
 
@@ -123,6 +163,7 @@ By using web first assertions Playwright (or Cypress) will wait until the expect
 For example, when testing an alert message, a test would click a button that makes a message appear and check that the alert message is there.
 
 If the alert message takes half a second to appear, assertions such as `toBeVisible()` will wait and retry if needed.
+</v-clicks>
 
 <!--
 toto
@@ -139,7 +180,7 @@ class: text-left
 Common:
 - fragile selectors
 - Hard breaks 
-- too weak assertions 
+- too weak assertions
 - All code in the same file
 - Code duplication in multiple files
 - Same dataset shared with multiple tests
@@ -173,6 +214,7 @@ Cypress:
 - https://www.browserstack.com/guide/cypress-best-practices
 - https://www.checklyhq.com/learn/playwright/assertions/
 - https://www.checklyhq.com/learn/playwright/writing-tests/
+- https://www.brandonpugh.com/better-way/development-guidelines/testing/good-vs-bad-tests.html
 
 ---
 layout: center
