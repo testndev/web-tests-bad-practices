@@ -20,25 +20,38 @@ drawings:
 transition: slide-left
 # enable MDC Syntax: https://sli.dev/features/mdc
 mdc: true
+
 # open graph
 # seoMeta:
 #  ogImage: https://cover.sli.dev
 ---
 
-# (Cypress / Playwright) Web Tests bad practices
+# Web Tests bad practices
 
-ou comment écrire du mauvais code Cypress / Playwright
+<h3 class="absolute left-50px top-330px">ou comment écrire du mauvais code Cypress / Playwright</h3>
 
-<div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
-  suivant <carbon:arrow-right />
+<div>
+  <img src="./logo/playwright-logo.svg" class="absolute right-40px top-50px h-64px" />
+  <img src="./logo/Cypress_Logomark_White-Color.svg" class="absolute right-140px top-50px h-64px" />
 </div>
 
- <footer class="absolute bottom-0 left-0 right-0 p-2">présenté par Alain et Alhusaine</footer>
+<footer class="absolute bottom-25px right-40px p-2">Alain BEGEY et Alhusaine NEMER</footer>
 
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
+<style>
+h1, h2 {
+  text-align: left;
+}
 
+h1 {
+  background-image: linear-gradient(45deg,rgb(249, 249, 249) 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-weight: 1000;
+}
+</style>
 ---
 transition: fade-out
 ---
@@ -48,18 +61,6 @@ transition: fade-out
 We will present some bad practices (and other pitfalls to avoid) while designing and implementing your tests with Cypress or Playwright.
 
 Some points will be specific to these frameworks, others will be common to any testing framework.
-
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
 
 <!--
 Here is another comment.
@@ -198,6 +199,18 @@ transition: fade
 ::right::
 
 <<< @/tests/page-object.ts {*|6,10,14,18}{lines:true,maxHeight:'390px'}
+<!--
+- Bad practice 1: fragile locators
+- Bad practice 2: dumb wait
+- Bad practice 3: repeat business logic
+- Bad practice 4: action without verification
+- Bad practice 5: Cypress too long chaining
+- Bad practice 6: 
+- Bad practice 7: dependency between tests
+- Bad practice 8: 
+- Bad practice 9: repeated setup
+- Bad practice 10: No web-first assertions
+-->
 
 ---
 layout: default
