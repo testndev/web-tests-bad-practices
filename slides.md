@@ -144,6 +144,65 @@ Last step should be a verification.
 layout: default
 transition: fade
 ---
+# Bad practice 1: ???
+
+<<< @/tests/locator-bad.spec.ts {*|8,9,11}{lines:true}
+
+---
+layout: default
+transition: fade
+---
+
+# Bad practice 1: fragile locators
+
+<<< @/tests/locator-good.spec.ts {*|8,9,11}{lines:true}
+
+---
+layout: default
+transition: fade
+---
+
+# Bad practice 2: ???
+
+<<< @/tests/wait-bad.spec.ts {*|11,23}{lines:true,maxHeight:'390px'}
+
+---
+layout: default
+transition: fade
+---
+
+# Bad practice 2: dumb wait
+
+<<< @/tests/wait-good.spec.ts {*|12-13,19-20,27}{lines:true,maxHeight:'390px'}
+
+---
+layout: default
+transition: fade
+---
+
+# Bad practice 3: ???
+
+<<< @/tests/page-object-bad.spec.ts {*|6-11,15-20}{lines:true}
+
+---
+layout: two-cols-header
+transition: fade
+---
+
+# Bad practice 3: repeat business logic
+
+::left::
+
+<<< @/tests/page-object-good.spec.ts {*|7-12,16-21}{lines:true,maxHeight:'390px'}
+
+::right::
+
+<<< @/tests/page-object.ts {*|6,10,14,18}{lines:true,maxHeight:'390px'}
+
+---
+layout: default
+transition: fade
+---
 
 # Bad practice 9: ???
 
