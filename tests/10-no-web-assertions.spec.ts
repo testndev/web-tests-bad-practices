@@ -1,4 +1,3 @@
-// Example Playwright: bad practice 10 👎
 import { test, expect } from "@playwright/test";
 
 test("Error message appears if unknown user ", async ({ page }) => {
