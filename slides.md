@@ -65,10 +65,7 @@ hideInToc: true
 
 # Bad practice 1: 👀
 
-<div class="applies-to">
-  applies to:
-  <div class="flex items-right"><img src="/logo/playwright.svg" /><img src="/logo/cypress-white.svg"/></div>
-</div>
+<AppliesToAllFrameworks />
 
 ````md magic-move`
 
@@ -113,11 +110,7 @@ transition: fade
 
 # Bad practice 2: 🐢
 
-
-<div class="applies-to">
-  applies to:
-  <div class="flex items-right"><img src="/logo/playwright.svg" /><img src="/logo/cypress-white.svg"/></div>
-</div>
+<AppliesToAllFrameworks />
 
 <<< @/tests/wait-bad.spec.cy.ts {*|11,23}{lines:true,maxHeight:'390px'}
 
@@ -129,11 +122,7 @@ hideInToc: true
 
 # Bad practice 2: dumb wait
 
-
-<div class="applies-to">
-  applies to:
-  <div class="flex items-right"><img src="/logo/playwright.svg" /><img src="/logo/cypress-white.svg"/></div>
-</div>
+<AppliesToAllFrameworks />
 
 <<< @/tests/wait-good.spec.cy.ts {*|12-13,19-20,27}{lines:true,maxHeight:'390px'}
 
@@ -141,10 +130,7 @@ hideInToc: true
 
 # Bad practice 3: ⏭️
 
-<div class="applies-to">
-  applies to:
-  <div class="flex items-right"><img src="/logo/playwright.svg" /><img src="/logo/cypress-white.svg"/></div>
-</div>
+<AppliesToAllFrameworks />
 
 <<< @/tests/07-dependent-tests.spec.ts {*|14,20-23}{lines:true,maxHeight:'390px'}
 
@@ -152,10 +138,7 @@ hideInToc: true
 hideInToc: true
 ---
 
-<div class="applies-to">
-  applies to:
-  <div class="flex items-right"><img src="/logo/playwright.svg" /><img src="/logo/cypress-white.svg"/></div>
-</div>
+<AppliesToAllFrameworks />
 
 # Bad practice 3: dependency between tests
 
@@ -170,7 +153,6 @@ Tests should not depend on the state of previous tests or test runs to avoid fla
 Each test should run independently, setting up its own state and cleaning up after itself. This ensures that tests can be run in any order and still pass, which is crucial for reliable test suites.
 </v-clicks>
 
-
 ---
 layout: default
 transition: fade
@@ -178,11 +160,7 @@ transition: fade
 
 # Bad practice 4: 🍹
 
-
-<div class="applies-to">
-  applies to:
-  <div class="flex items-right"><img src="/logo/playwright.svg" /><img src="/logo/cypress-white.svg"/></div>
-</div>
+<AppliesToAllFrameworks />
 
 <<< @/tests/locator-bad.spec.cy.ts {*|8,9,11}{lines:true}
 
@@ -194,10 +172,7 @@ hideInToc: true
 
 # Bad practice 4: fragile locators
 
-<div class="applies-to">
-  applies to:
-  <div class="flex items-right"><img src="/logo/playwright.svg" /><img src="/logo/cypress-white.svg"/></div>
-</div>
+<AppliesToAllFrameworks />
 
 <<< @/tests/locator-good.spec.cy.ts {*|8,9,11}{lines:true}
 
@@ -208,14 +183,12 @@ transition: fade
 
 # Bad practice 5: ⛓️
 
-
 <div class="applies-to">
   applies to:
   <div class="flex items-right"><img src="/logo/cypress-white.svg"/></div>
 </div>
 
 ... **TO BE COMPLETED** ...
-
 
 ---
 layout: default
@@ -223,18 +196,14 @@ transition: fade
 hideInToc: true
 ---
 
-
 <div class="applies-to">
   applies to:
   <div class="flex items-right"><img src="/logo/cypress-white.svg"/></div>
 </div>
 
-
 # Bad practice 5: too long chaining
 
-
 ... **TO BE COMPLETED** ...
-
 
 ---
 layout: default
@@ -243,13 +212,9 @@ transition: fade
 
 # Bad practice 6: 🍱
 
-<div class="applies-to">
-  applies to:
-  <div class="flex items-right"><img src="/logo/playwright.svg" /><img src="/logo/cypress-white.svg"/></div>
-</div>
+<AppliesToAllFrameworks />
 
 ... **TO BE COMPLETED** ...
-
 
 ---
 layout: default
@@ -259,10 +224,7 @@ hideInToc: true
 
 # Bad practice 6: dataset and Fixture
  
-<div class="applies-to">
-  applies to:
-  <div class="flex items-right"><img src="/logo/playwright.svg" /><img src="/logo/cypress-white.svg"/></div>
-</div>
+<AppliesToAllFrameworks />
 
 ... **TO BE COMPLETED** ...
  
@@ -274,11 +236,7 @@ transition: fade
 
 # Bad practice 7: 🗄️
 
-
-<div class="applies-to">
-  applies to:
-  <div class="flex items-right"><img src="/logo/playwright.svg" /><img src="/logo/cypress-white.svg"/></div>
-</div>
+<AppliesToAllFrameworks />
 
 <<< @/tests/page-object-bad.spec.cy.ts {*|6-11,15-20}{lines:true}
 
@@ -290,11 +248,7 @@ hideInToc: true
 
 # Bad practice 7: repeat business logic
 
-
-<div class="applies-to">
-  applies to:
-  <div class="flex items-right"><img src="/logo/playwright.svg" /><img src="/logo/cypress-white.svg"/></div>
-</div>
+<AppliesToAllFrameworks />
 
 ::left::
 
@@ -306,7 +260,6 @@ hideInToc: true
 
 
 
-
 ---
 layout: default
 transition: fade
@@ -314,14 +267,9 @@ transition: fade
 
 # Bad practice 8: 🔤
 
-<div class="applies-to">
-  applies to:
-  <div class="flex items-right"><img src="/logo/playwright.svg" /><img src="/logo/cypress-white.svg"/></div>
-</div>
+<AppliesToAllFrameworks />
 
-
-<<< @/tests/08-bad-titles.spec.ts {*|15,18|27,28,31|44}{lines:true,maxHeight:'390px'}
-
+<<< @/tests/08-bad-titles.spec.ts {*|14,17|26,27|42}{lines:true,maxHeight:'390px'}
 
 ---
 layout: default
@@ -331,13 +279,9 @@ hideInToc: true
 
 # Bad practice 8: bad titles
  
-<div class="applies-to">
-  applies to:
-  <div class="flex items-right"><img src="/logo/playwright.svg" /><img src="/logo/cypress-white.svg"/></div>
-</div>
+<AppliesToAllFrameworks />
 
-
-<<< @/tests/08-better-titles.spec.ts {*|15,18|27,28,31|44}{lines:true,maxHeight:'300px'}
+<<< @/tests/08-better-titles.spec.ts {*|14,17|26,27|42}{lines:true,maxHeight:'300px'}
 
 <v-clicks>
 
@@ -356,11 +300,7 @@ transition: fade
 
 # Bad practice 9: 🏁
 
-
-<div class="applies-to">
-  applies to:
-  <div class="flex items-right"><img src="/logo/playwright.svg" /><img src="/logo/cypress-white.svg"/></div>
-</div>
+<AppliesToAllFrameworks />
 
 <<< @/tests/09-repeated.spec.ts {*|5-10,15-20}{lines:true}
 
@@ -372,11 +312,7 @@ hideInToc: true
 
 # Bad practice 9: repeated setup
 
-
-<div class="applies-to">
-  applies to:
-  <div class="flex items-right"><img src="/logo/playwright.svg" /><img src="/logo/cypress-white.svg"/></div>
-</div>
+<AppliesToAllFrameworks />
 
 <<< @/tests/09-not-repeated.spec.ts {*|3-10}{lines:true}
 
@@ -388,12 +324,7 @@ Avoid repeated block of code for setup (`beforeAll()`, `beforeEach()`)
 
 # Bad practice 10: 🌐
 
-
-<div class="applies-to">
-  applies to:
-  <div class="flex items-right"><img src="/logo/playwright.svg" /><img src="/logo/cypress-white.svg"/></div>
-</div>
-
+<AppliesToAllFrameworks />
 
 <<< @/tests/10-no-web-assertions.spec.ts {*|8}{lines:true}
 
@@ -403,11 +334,7 @@ hideInToc: true
 
 # Bad practice 10: No web-first assertions
 
-
-<div class="applies-to">
-  applies to:
-  <div class="flex items-right"><img src="/logo/playwright.svg" /><img src="/logo/cypress-white.svg"/></div>
-</div>
+<AppliesToAllFrameworks />
 
 <<< @/tests/10-web-assertions.spec.ts {*|8}{lines:true}
 
@@ -423,11 +350,6 @@ For example, when testing an alert message, a test would click a button that mak
 
 If the alert message takes half a second to appear, assertions such as `toBeVisible()` will wait and retry if needed.
 </v-clicks>
-
-<!--
-toto
--->
-
 
 ---
 layout: default
