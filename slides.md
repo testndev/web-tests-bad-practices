@@ -319,7 +319,8 @@ transition: fade
   <div class="flex items-right"><img src="/logo/playwright.svg" /><img src="/logo/cypress-white.svg"/></div>
 </div>
 
-... **TO BE COMPLETED** ...
+
+<<< @/tests/08-bad-titles.spec.ts {*|15,18|27,28,31|44}{lines:true,maxHeight:'390px'}
 
 
 ---
@@ -335,9 +336,18 @@ hideInToc: true
   <div class="flex items-right"><img src="/logo/playwright.svg" /><img src="/logo/cypress-white.svg"/></div>
 </div>
 
-... **TO BE COMPLETED** ...
- 
 
+<<< @/tests/08-better-titles.spec.ts {*|15,18|27,28,31|44}{lines:true,maxHeight:'300px'}
+
+<v-clicks>
+
+## 👉 Check the title of the tests
+
+- The title of the test should be descriptive and meaningful.
+- It should clearly indicate what the test is verifying, and be coherent with the test's purpose.
+- Avoid using generic titles like "Test 1" or "Test 2".
+
+</v-clicks>
 
 ---
 layout: default
