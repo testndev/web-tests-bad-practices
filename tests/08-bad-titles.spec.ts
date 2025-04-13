@@ -7,12 +7,11 @@ test.describe("Factorization with MS Math Solver", () => {
   });
 
   [
-    { a: "9", b: "9", r: "81", h: "3^{4}" },
-    { a: "8", b: "8", r: "64", h: "2^{6}" },
-    { a: "6", b: "9", r: "54", h: "2\\times 3^{3}" },
-
-  ].forEach(({ a, b, r: result, h: hiddenFactorization }) => {
-    test(`should correctly factorize addition of composite numbers - example with ${a}+${b}`, async ({ page }) => {
+    { a: "9", b: "9", result: "81", hiddenFactorization: "3^{4}" },
+    { a: "8", b: "8", result: "64", hiddenFactorization: "2^{6}" },
+    { a: "6", b: "9", result: "54", hiddenFactorization: "2\\times 3^{3}" },
+  ].forEach(({ a, b, result, hiddenFactorization }) => {
+    test(`Should correctly factorize addition of composite numbers - example with ${a}+${b}`, async ({ page }) => {
       const po = new MathSolverPage(page);
       await po.calculatorButton(a).click();
       await po.calculatorButton("Multiply").click();
@@ -25,7 +24,7 @@ test.describe("Factorization with MS Math Solver", () => {
   });
 
   [5, 41, 97].forEach((number) => {
-    test(`should correctly factorize x^2 for composite number multiplied by itself - example with ${number}`, async ({ page }) => {
+    test(`Should correctly factorize x^2 for composite number multiplied by itself - example with ${number}`, async ({ page }) => {
       const po = new MathSolverPage(page);
       await po.calcInput.pressSequentially(number.toString());
       await po.calculatorButton("Multiply").click();
@@ -37,10 +36,9 @@ test.describe("Factorization with MS Math Solver", () => {
   });
 
   [
-    { a: "41", b: "31", r: "1271", v: "31×41" },
-    { a: "31", b: "37", r: "1147", v: "31×37" },
-
-  ].forEach(({ a, b, r: result, v: visibleFactorization }) => {
+    { a: "41", b: "31", result: "1271", visibleFactorization: "31×41" },
+    { a: "31", b: "37", result: "1147", visibleFactorization: "31×37" },
+  ].forEach(({ a, b, result, visibleFactorization }) => {
     test(`Test - example with ${a}x${b}`, async ({ page }) => {
       const po = new MathSolverPage(page);
       await po.calcInput.pressSequentially(a);
