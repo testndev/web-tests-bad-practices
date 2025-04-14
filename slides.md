@@ -113,7 +113,17 @@ hideInToc: true
 
 <AppliesToAllFrameworks />
 
-<<< @/tests/wait-good.spec.cy.ts {*|12-13,19-20,27}{lines:true,maxHeight:'390px'}
+<<< @/tests/wait-good.spec.cy.ts {*|12-13,19-20,27}{lines:true,maxHeight:'250px'}
+
+<v-clicks>
+
+## 👉 Use the auto-wait mechanism
+
+Understand and know your tested application (interface). Know what to wait...
+
+Cypress  & Playwright provide intelligent auto-wait mechanisms. Use them instead of hardcoded waits/sleeps.
+
+</v-clicks>
 
 ---
 
@@ -166,6 +176,17 @@ hideInToc: true
 
 <<< @/tests/locator-good.spec.cy.ts {*|8,9,11}{lines:true}
 
+<v-clicks>
+
+### 👉 Use readable dedicated elements' locators
+
+- Each manipulated element should have its own identifier.
+- It should be agnostic from internal implementation, resistant to refactoring.
+- Cypress recommends `data-*` attributes for each controlled elements,
+whereas Playwright promotes user-oriented locators.
+
+</v-clicks>
+
 ---
 layout: default
 transition: fade
@@ -189,6 +210,17 @@ hideInToc: true
 
 <<< @/tests/chaining-good.spec.cy.ts {*|7-11}{lines:true}
 
+
+<v-clicks>
+
+### 👉 Avoid long chaining
+
+- Improve readability of code with split command
+- Control sequence of actions and controls
+- Use chains when needed
+
+</v-clicks>
+
 ---
 layout: default
 transition: fade
@@ -198,7 +230,7 @@ transition: fade
 
 <AppliesToAllFrameworks />
 
-<<< @/tests/fixture-bad.spec.cy.ts {*|8,14,20-24,30-34}{lines:true}
+<<< @/tests/fixture-bad.spec.cy.ts {*|8,14,20-24,30-34}{lines:true,maxHeight:'380px'}
 
 ---
 layout: default
@@ -210,8 +242,16 @@ hideInToc: true
 
 <AppliesToAllFrameworks />
 
-<<< @/tests/fixture-good.spec.cy.ts {*|12,19-26,38-42}{lines:true}
+<<< @/tests/fixture-good.spec.cy.ts {*|12,19-26,38-42}{lines:true,maxHeight:'260px' }
 
+<v-clicks>
+
+### 👉 Each test should have it's own fixture
+
+- Reduce the search for when is defined the data by putting it not each test
+- reduce the risk to break some tests by editing the data
+
+</v-clicks>
 
 ---
 layout: default
