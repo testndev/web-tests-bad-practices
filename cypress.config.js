@@ -6,6 +6,7 @@ export default defineConfig({
       // implement node event listeners here
     },
     specPattern: "**/*.spec.cy.ts",
+    fixturesFolder: "tests/fixtures",
     supportFile: false,
   },
 });

@@ -1,6 +1,6 @@
 // Example Cypress : bad practice 👎
 
-describe("Tests Cypress", () => {
+describe("Dashboard page tests", () => {
 
   it("Select an option, click on the filter button and see the result", () => {
     cy.visit("/dashboard")

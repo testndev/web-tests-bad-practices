@@ -1,8 +1,8 @@
 // Example Cypress : good practice 👍
 
-describe("Tests Cypress", () => {
+describe("Dashboard page tests", () => {
 
-  it("Select an option, click on the filter button and see the result", () => {
+  it("On dashboard page, select an option, click on the filter button and see the result", () => {
     cy.visit("/dashboard")
 
     cy.get('[data-cy="dashboard_filter_username"]').type("my_username");
