@@ -28,14 +28,14 @@ mdc: true
 
 <h1 class="gradient">Web Tests bad practices</h1>
 
-<h3 class="absolute left-50px top-330px">ou comment écrire du mauvais code Cypress / Playwright</h3>
+<h3 class="absolute left-50px top-330px">or how to write bad code "Cypress/Playwright"</h3>
 
 <div>
   <img src="/logo/playwright.svg" class="absolute right-40px top-50px h-64px" />
   <img src="/logo/cypress-white.svg" class="absolute right-140px top-50px h-64px" />
 </div>
 
-<footer class="absolute bottom-25px right-40px p-2">Alain BEGEY et Alhusaine NEMER</footer>
+<footer class="absolute bottom-25px right-40px p-2">Alain BEGEY & Alhusaine NEMER</footer>
 
 ---
 transition: fade-out
@@ -44,6 +44,8 @@ transition: fade-out
 # Intro
 
 We will present some bad practices (and other pitfalls to avoid) while designing and implementing your tests with Cypress or Playwright.
+
+We have selected 10 bad practices (of courses many more exists), with code examples, using Cypress or Playwright. Some are executable.
 
 Some points will be specific to these frameworks, others will be common to any testing framework.
 
@@ -148,7 +150,7 @@ hideInToc: true
 
 ### 👉 Isolate each of your tests
 
-Tests should not depend on the state of previous tests or test runs to avoid flaky tests. 
+Tests should not depend on the state of previous tests or test runs to avoid flaky tests.
 
 Each test should run independently, setting up its own state and cleaning up after itself. This ensures that tests can be run in any order and still pass, which is crucial for reliable test suites.
 </v-clicks>
@@ -223,11 +225,11 @@ hideInToc: true
 ---
 
 # Bad practice 6: dataset and Fixture
- 
+
 <AppliesToAllFrameworks />
 
 ... **TO BE COMPLETED** ...
- 
+
 
 ---
 layout: default
@@ -278,7 +280,7 @@ hideInToc: true
 ---
 
 # Bad practice 8: bad titles
- 
+
 <AppliesToAllFrameworks />
 
 <<< @/tests/08-better-titles.spec.ts {*|14,17|26,27|42}{lines:true,maxHeight:'300px'}
@@ -302,7 +304,7 @@ transition: fade
 
 <AppliesToAllFrameworks />
 
-<<< @/tests/09-repeated.spec.ts {*|5-10,15-20}{lines:true}
+<<< @/tests/09-repeated.spec.ts {*|4-7,12-15}{lines:true}
 
 ---
 layout: default
@@ -314,11 +316,15 @@ hideInToc: true
 
 <AppliesToAllFrameworks />
 
-<<< @/tests/09-not-repeated.spec.ts {*|3-10}{lines:true}
+<<< @/tests/09-not-repeated.spec.ts {*|2-7}{lines:true}
 
 ## 👉 Group commons actions in setup
 
-Avoid repeated block of code for setup (`beforeAll()`, `beforeEach()`)
+Avoid repeated block of code for setup.
+
+Place common setup in `beforeAll()` or `beforeEach()` block.
+
+
 
 ---
 
@@ -342,47 +348,48 @@ hideInToc: true
 
 ## 👉 Use web first assertions
 
-Assertions are a way to verify that the expected result and the actual result matched or not. 
+Assertions are a way to verify that the expected result and the actual result matched or not.
 
 By using web first assertions Playwright (or Cypress) will wait until the expected condition is met.
 
 For example, when testing an alert message, a test would click a button that makes a message appear and check that the alert message is there.
 
 If the alert message takes half a second to appear, assertions such as `toBeVisible()` will wait and retry if needed.
+
 </v-clicks>
 
 ---
 layout: default
-class: text-left
 ---
 
 # Conclusion
 
-Common:
-- fragile selectors
-- Hard breaks 
-- too weak assertions
-- All code in the same file
-- Code duplication in multiple files
-- Same dataset shared with multiple tests
-- Tests dependent on each other
-- Tests dependent on external elements to test subject
-- `toBe(true)` or `should("be.true")` for everything
+Reminder of presented recommendations:
 
-Cypress: 
-- Too long chaining
+1. 👀 Every action should be followed by a verification
+2. 🐢 Use auto-wait mechanisms provided by frameworks
+3. ⏭️ Isolate each of your tests
+4. 🍹 Avoid fragile selectors
+5. ⛓️ Avoid long chaining (with Cypress)
+6. 🍱 Manage mocked dataset with fixtures
+7. 🗄️ Regroup repeated business logic (with Page Object and commons steps)
+8. 🔤 Use coherent titles
+9. 🏁 Regroup repeated setups
+10. 🌐 Use Web assertions provided by frameworks
+
 
 <!--
-- des sélecteurs fragiles
-- Des pauses en dur
-- Du chainage trop long
-- Assertions trop faibles
-- Tout le code dans le même fichier
-- Duplication de code dans plusieurs fichiers
-- Un jeu de données commun à plusieurs tests
-- Des tests dépendants les uns des autres
-- Des tests dépendants d'éléments externes au sujet de test
-- `toBe(true)` ou should("be.true") pour tout --> utiliser les assertion Web adaptées
+1. Chaque action devrait être suivie d’une vérification
+2. Utiliser les mécanismes d’attente automatique fournis par les outils
+3. Isolez chacun de vos tests
+4. Évitez les sélecteurs fragiles
+5. Évitez le chaînage long (avec Cypress)
+6. Gérer le jeu de données simulé avec des fixtures
+7. Regrouper la logique métier répétée (avec des Page Object et étapes communes)
+8. Utiliser des titres cohérents
+9. Regrouper les "setup" répétées
+10. Utiliser les assertions Web fournies par les outils
+
 -->
 
 ---
