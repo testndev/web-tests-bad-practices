@@ -37,3 +37,23 @@ h2 {
   height: 32px;
   margin: 5px;
 }
+
+footer {
+  z-index: 100;
+  position: fixed;
+  bottom: 5px;
+  right: 0;
+  padding-right: 30px;
+  text-align: right;
+  font-size: 0.7em;
+  font-family: "Courier New", Courier, monospace;
+  color:gray;
+  width: 100%;
+  background-color: #00000065;
+  box-shadow: 0 0 5px rgba(244, 244, 244, 0.437);
+}
+
+footer .page-number {
+  padding-left: 10px;
+  color: #79e99f;
+}

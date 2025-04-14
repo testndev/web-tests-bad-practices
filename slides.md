@@ -1,11 +1,7 @@
 ---
-# You can also start simply with 'default'
 theme: default
 css: unocss
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
 background: /assets/first-slide-background.png
-# some information about your slides (markdown enabled)
 title: (Cypress / Playwright) Web Tests bad practices
 info: |
   ## Slidev Starter Template
@@ -14,16 +10,10 @@ info: |
   Learn more at [Sli.dev](https://sli.dev)
 # apply unocss classes to the current slide
 class: text-center
-# https://sli.dev/features/drawing
 drawings:
   persist: false
-# slide transition: https://sli.dev/guide/animations.html#slide-transitions
 transition: slide-left
-# enable MDC Syntax: https://sli.dev/features/mdc
 mdc: true
-# open graph
-# seoMeta:
-#  ogImage: https://cover.sli.dev
 ---
 
 <h1 class="gradient">Web Tests bad practices</h1>
@@ -35,19 +25,21 @@ mdc: true
   <img src="/logo/cypress-white.svg" class="absolute right-140px top-50px h-64px" />
 </div>
 
-<footer class="absolute bottom-25px right-40px p-2">Alain BEGEY & Alhusaine NEMER</footer>
-
 ---
 transition: fade-out
 ---
 
-# Intro
+# Introduction
 
 We will present some bad practices (and other pitfalls to avoid) while designing and implementing your tests with Cypress or Playwright.
 
-We have selected 10 bad practices (of courses many more exists), with code examples, using Cypress or Playwright. Some are executable.
+We have selected 10 bad practices (of course many more exists).
 
-Some points will be specific to these frameworks, others will be common to any testing framework.
+Each one is illustrated with code examples, using [Cypress.io](https://www.cypress.io/) or [Playwright](https://playwright.dev/).
+
+Some are executable, targeting simple "[GitHub login](https://github.com/login)" page and more complex "[Microsoft Math Solver](https://mathsolver.microsoft.com/fr)".
+
+Some points will be specific to these frameworks, others will be common to any (Web) testing framework: [WebdriverIO](https://webdriver.io/), [Jest](https://jestjs.io/), [JUnit](https://junit.org/junit5/docs/current/user-guide/)...
 
 <!--
 Here is another comment.
@@ -153,6 +145,7 @@ hideInToc: true
 Tests should not depend on the state of previous tests or test runs to avoid flaky tests.
 
 Each test should run independently, setting up its own state and cleaning up after itself. This ensures that tests can be run in any order and still pass, which is crucial for reliable test suites.
+
 </v-clicks>
 
 ---
@@ -185,10 +178,7 @@ transition: fade
 
 # Bad practice 5: ⛓️
 
-<div class="applies-to">
-  applies to:
-  <div class="flex items-right"><img src="/logo/cypress-white.svg"/></div>
-</div>
+<AppliesToCypressOnly />
 
 ... **TO BE COMPLETED** ...
 
@@ -198,10 +188,7 @@ transition: fade
 hideInToc: true
 ---
 
-<div class="applies-to">
-  applies to:
-  <div class="flex items-right"><img src="/logo/cypress-white.svg"/></div>
-</div>
+<AppliesToCypressOnly />
 
 # Bad practice 5: too long chaining
 
@@ -405,7 +392,7 @@ Reminder of presented recommendations:
 - https://www.brandonpugh.com/better-way/development-guidelines/testing/good-vs-bad-tests.html
 
 ---
-layout: center
+layout: end
 class: text-center
 hideInToc: true
 ---
