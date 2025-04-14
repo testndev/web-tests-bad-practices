@@ -3,17 +3,12 @@ theme: default
 css: unocss
 background: /assets/first-slide-background.png
 title: (Cypress / Playwright) Web Tests bad practices
-info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
-# apply unocss classes to the current slide
 class: text-center
 drawings:
   persist: false
-transition: slide-left
+transition: fade
 mdc: true
+hideInToc: true
 ---
 
 <h1 class="gradient">Web Tests bad practices</h1>
@@ -258,7 +253,7 @@ transition: fade
 
 <AppliesToAllFrameworks />
 
-<<< @/tests/08-bad-titles.spec.ts {*|14,17|26,27|42}{lines:true,maxHeight:'390px'}
+<<< @/tests/08-bad-titles.spec.ts {*|9,10|27|44,49}{lines:true,maxHeight:'390px'}
 
 ---
 layout: default
@@ -270,13 +265,13 @@ hideInToc: true
 
 <AppliesToAllFrameworks />
 
-<<< @/tests/08-better-titles.spec.ts {*|14,17|26,27|42}{lines:true,maxHeight:'300px'}
+<<< @/tests/08-better-titles.spec.ts {*|9,10|27|46,51}{lines:true,maxHeight:'280px'}
 
 <v-clicks>
 
-## 👉 Check the title of the tests
+## 👉 Check the titles of the tests
 
-- The title of the test should be descriptive and meaningful.
+- The title of each test should be descriptive and meaningful.
 - It should clearly indicate what the test is verifying, and be coherent with the test's purpose.
 - Avoid using generic titles like "Test 1" or "Test 2".
 
@@ -398,5 +393,3 @@ hideInToc: true
 ---
 
 # Thank you
-
-<PoweredBySlidev mt-10 />
