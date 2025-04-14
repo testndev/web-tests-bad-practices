@@ -216,7 +216,7 @@ transition: fade
 
 <AppliesToAllFrameworks />
 
-... **TO BE COMPLETED** ...
+<<< @/tests/fixture-bad.spec.cy.ts {*|8, 14, 20-24, 30-34}{lines:true}
 
 ---
 layout: default
@@ -228,7 +228,7 @@ hideInToc: true
 
 <AppliesToAllFrameworks />
 
-... **TO BE COMPLETED** ...
+<<< @/tests/fixture-good.spec.cy.ts {*|12, 19-26, 38-42}{lines:true}
 
 
 ---
