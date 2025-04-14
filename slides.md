@@ -190,7 +190,7 @@ transition: fade
   <div class="flex items-right"><img src="/logo/cypress-white.svg"/></div>
 </div>
 
-... **TO BE COMPLETED** ...
+<<< @/tests/chaining-bad.spec.cy.ts {*|7-13}{lines:true}
 
 ---
 layout: default
@@ -205,7 +205,7 @@ hideInToc: true
 
 # Bad practice 5: too long chaining
 
-... **TO BE COMPLETED** ...
+<<< @/tests/chaining-good.spec.cy.ts {*|7-11}{lines:true}
 
 ---
 layout: default
@@ -216,7 +216,7 @@ transition: fade
 
 <AppliesToAllFrameworks />
 
-... **TO BE COMPLETED** ...
+<<< @/tests/fixture-bad.spec.cy.ts {*|8,14,20-24,30-34}{lines:true}
 
 ---
 layout: default
@@ -228,7 +228,7 @@ hideInToc: true
 
 <AppliesToAllFrameworks />
 
-... **TO BE COMPLETED** ...
+<<< @/tests/fixture-good.spec.cy.ts {*|12,19-26,38-42}{lines:true}
 
 
 ---
