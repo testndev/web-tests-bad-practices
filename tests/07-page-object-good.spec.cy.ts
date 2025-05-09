@@ -1,7 +1,7 @@
 // Example Cypress : good practice 👍
 import dashboardPage from "./pages/dashboard.page"
 
-describe("Dashboard page tests", () => {
+describe("Tests Cypress", () => {
 
   it("Select an option, click on the filter button and see the result", () => {
     dashboardPage.visit();

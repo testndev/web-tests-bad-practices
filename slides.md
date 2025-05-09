@@ -101,7 +101,7 @@ transition: fade
 
 <AppliesToAllFrameworks />
 
-<<< @/tests/wait-bad.spec.cy.ts {*|11,23}{lines:true,maxHeight:'390px'}
+<<< @/tests/02-wait-bad.spec.cy.ts {*|8,17}{lines:true,maxHeight:'390px'}
 
 ---
 layout: default
@@ -113,7 +113,7 @@ hideInToc: true
 
 <AppliesToAllFrameworks />
 
-<<< @/tests/wait-good.spec.cy.ts {*|12-13,19-20,27}{lines:true,maxHeight:'250px'}
+<<< @/tests/02-wait-good.spec.cy.ts {*|6,8|14,15,19}{lines:true,maxHeight:'290px'}
 
 <v-clicks>
 
@@ -162,7 +162,7 @@ transition: fade
 
 <AppliesToAllFrameworks />
 
-<<< @/tests/locator-bad.spec.cy.ts {*|8,9,11}{lines:true}
+<<< @/tests/04-locator-bad.spec.cy.ts {*|7-9}{lines:true}
 
 ---
 layout: default
@@ -174,7 +174,7 @@ hideInToc: true
 
 <AppliesToAllFrameworks />
 
-<<< @/tests/locator-good.spec.cy.ts {*|8,9,11}{lines:true}
+<<< @/tests/04-locator-good.spec.cy.ts {*|7-9}{lines:true}
 
 <v-clicks>
 
@@ -196,7 +196,7 @@ transition: fade
 
 <AppliesToCypressOnly />
 
-<<< @/tests/chaining-bad.spec.cy.ts {*|7-13}{lines:true}
+<<< @/tests/05-chaining-bad.spec.cy.ts {*|7-13}{lines:true}
 
 ---
 layout: default
@@ -208,7 +208,7 @@ hideInToc: true
 
 # Bad practice 5: too long chaining
 
-<<< @/tests/chaining-good.spec.cy.ts {*|7-11}{lines:true}
+<<< @/tests/05-chaining-good.spec.cy.ts {*|7-11}{lines:true}
 
 
 <v-clicks>
@@ -230,7 +230,7 @@ transition: fade
 
 <AppliesToAllFrameworks />
 
-<<< @/tests/fixture-bad.spec.cy.ts {*|8,14,20-24,30-34}{lines:true,maxHeight:'380px'}
+<<< @/tests/06-fixture-bad.spec.cy.ts {*|7,12,17-21,26-29}{lines:true,maxHeight:'380px'}
 
 ---
 layout: default
@@ -242,7 +242,7 @@ hideInToc: true
 
 <AppliesToAllFrameworks />
 
-<<< @/tests/fixture-good.spec.cy.ts {*|12,19-26,38-42}{lines:true,maxHeight:'260px' }
+<<< @/tests/06-fixture-good.spec.cy.ts {*|12,19-26,38-42}{lines:true,maxHeight:'280px' }
 
 <v-clicks>
 
@@ -262,7 +262,7 @@ transition: fade
 
 <AppliesToAllFrameworks />
 
-<<< @/tests/page-object-bad.spec.cy.ts {*|6-11,15-20}{lines:true}
+<<< @/tests/07-page-object-bad.spec.cy.ts {*|6-11,15-20}{lines:true}
 
 ---
 layout: two-cols-header
@@ -276,7 +276,7 @@ hideInToc: true
 
 ::left::
 
-<<< @/tests/page-object-good.spec.cy.ts {*|7-12,16-21}{lines:true,maxHeight:'390px'}
+<<< @/tests/07-page-object-good.spec.cy.ts {*|7-12,16-21}{lines:true,maxHeight:'390px'}
 
 ::right::
 
