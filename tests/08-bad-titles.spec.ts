@@ -44,7 +44,7 @@ test.describe("Factorization with MS Math Solver", () => {
   test(`Should correctly factorize addition of composite numbers - example with ${a}+${b}`, async ({
     page,
   }) => {
-    const po = new MathSolverPage(page);
+    const po = await new MathSolverPage(page).goto();
     await po.calculatorButton(a).click();
     await po.calculatorButton("Multiply").click();
     await po.calculatorButton(b).click();
@@ -54,4 +54,18 @@ test.describe("Factorization with MS Math Solver", () => {
       hiddenFactorization
     );
   });
+
+
 });
+
+
+/*
+  test(`sssss`, async ({ page }) => {
+    const po = new MathSolverPage(page);
+    await po.calculatorButton(1).click();
+    await po.calculatorButton("Multiply").click();
+    await po.calculatorButton(2).click();
+    await po.calculatorButton("Solve").click();
+    await expect(po.visibleAnswerResult("Evaluate")).toHaveText("2");
+  });
+*/

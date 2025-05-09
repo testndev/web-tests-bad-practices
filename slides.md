@@ -226,11 +226,11 @@ layout: default
 transition: fade
 ---
 
-# Bad practice 6: 🍱
+# Bad practice 6: 🗄️
 
 <AppliesToAllFrameworks />
 
-<<< @/tests/06-fixture-bad.spec.cy.ts {*|7,12,17-21,26-29}{lines:true,maxHeight:'380px'}
+<<< @/tests/06-page-object-bad.spec.cy.ts {*|6-13,17-26}{lines:true}
 
 ---
 layout: default
@@ -238,11 +238,57 @@ transition: fade
 hideInToc: true
 ---
 
-# Bad practice 6: dataset and Fixture
+# Bad practice 6: repeat business logic
+
+<AppliesToAllFrameworks />
+ 
+
+<<< @/tests/06-page-object-good.spec.cy.ts {*|7-13,17-26}{lines:true,maxHeight:'390px'}
+
+---
+layout: default
+transition: fade
+hideInToc: true
+---
+
+# Bad practice 6: repeat business logic
+ 
+<<< @/tests/pages/coffee.page.ts {*|6,9-23}{lines:true,maxHeight:'390px'}
+
+
+<v-clicks>
+
+### 👉 Use factorization patterns
+
+Use some design patterns to factorize your code and avoid repeated code.
+
+For example: *Page Object Model*, "Screenplay" pattern, ...
+
+</v-clicks>
+
+
+---
+layout: default
+transition: fade
+---
+
+# Bad practice 7: 🍱
 
 <AppliesToAllFrameworks />
 
-<<< @/tests/06-fixture-good.spec.cy.ts {*|12,19-26,38-42}{lines:true,maxHeight:'280px' }
+<<< @/tests/07-fixture-bad.spec.cy.ts {*|7,12,17-21,26-29}{lines:true,maxHeight:'380px'}
+
+---
+layout: default
+transition: fade
+hideInToc: true
+---
+
+# Bad practice 7: dataset and Fixture
+
+<AppliesToAllFrameworks />
+
+<<< @/tests/07-fixture-good.spec.cy.ts {*|12,19-26,38-42}{lines:true,maxHeight:'280px' }
 
 <v-clicks>
 
@@ -252,37 +298,6 @@ hideInToc: true
 - reduce the risk to break some tests by editing the data
 
 </v-clicks>
-
----
-layout: default
-transition: fade
----
-
-# Bad practice 7: 🗄️
-
-<AppliesToAllFrameworks />
-
-<<< @/tests/07-page-object-bad.spec.cy.ts {*|6-11,15-20}{lines:true}
-
----
-layout: two-cols-header
-transition: fade
-hideInToc: true
----
-
-# Bad practice 7: repeat business logic
-
-<AppliesToAllFrameworks />
-
-::left::
-
-<<< @/tests/07-page-object-good.spec.cy.ts {*|7-12,16-21}{lines:true,maxHeight:'390px'}
-
-::right::
-
-<<< @/tests/pages/dashboard.page.ts {*|6,10,14,18}{lines:true,maxHeight:'390px'}
-
-
 
 ---
 layout: default
@@ -354,7 +369,7 @@ Place common setup in `beforeAll()` or `beforeEach()` block.
 
 <AppliesToAllFrameworks />
 
-<<< @/tests/10-no-web-assertions.spec.ts {*|8}{lines:true}
+<<< @/tests/10-no-web-assertions.spec.ts {*|9}{lines:true}
 
 ---
 hideInToc: true
