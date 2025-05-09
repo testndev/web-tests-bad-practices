@@ -131,7 +131,7 @@ Cypress  & Playwright provide intelligent auto-wait mechanisms. Use them instead
 
 <AppliesToAllFrameworks />
 
-<<< @/tests/07-dependent-tests.spec.ts {*|14,20-23}{lines:true,maxHeight:'390px'}
+<<< @/tests/03-dependent-tests.spec.ts {*|14,20-23}{lines:true,maxHeight:'390px'}
 
 ---
 hideInToc: true
@@ -141,7 +141,7 @@ hideInToc: true
 
 # Bad practice 3: dependency between tests
 
-<<< @/tests/07-independent-tests.spec.ts {*|4-6|8-10,12,14|17,20,21,23,25,28,30|33,36,38,40,42|*}{lines:true,maxHeight:'260px' }
+<<< @/tests/03-independent-tests.spec.ts {*|4-6|8-10,12,14|17,20,21,23,25,28,30|33,36,38,40,42|*}{lines:true,maxHeight:'260px' }
 
 <v-clicks>
 
