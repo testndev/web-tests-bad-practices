@@ -10,7 +10,7 @@ class CoffeePage {
     return cy.get(':nth-child(3) > ul > li')
   }
 
-  getCoffeeByType = (type) => {
+  getCoffeeByType = (type: string) => {
     return cy.get(`:nth-child(3) > ul > li`).contains(type).parent()
   }
 
@@ -18,7 +18,11 @@ class CoffeePage {
     return cy.get(`[data-test="checkout"]`)
   }
 
-  getFixture = (data) => {
+  getPromo = () => {
+    return cy.get(`.promo`)
+  }
+
+  getFixture = (data: any) => {
     cy.fixture("coffee.json").then(fixtureData => {
       const finalData = []
       data.forEach(element => {

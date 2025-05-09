@@ -27,7 +27,7 @@ test.describe("Factorization with MS Math Solver", () => {
     test(`Two prime numbers cannot be factorized - example with ${a}x${b}`, async ({
       page,
     }) => {
-      const po = new MathSolverPage(page);
+      const po = await new MathSolverPage(page).goto();
       await po.calcInput.pressSequentially(`${a}*${b}`);
       await po.calculatorButton("Solve").click();
       await expect(po.visibleAnswerResult("Evaluate")).toHaveText(result);
@@ -46,7 +46,7 @@ test.describe("Factorization with MS Math Solver", () => {
   test(`Should correctly factorize multiplication of composite numbers - example with ${a}x${b}`, async ({
     page,
   }) => {
-    const po = new MathSolverPage(page);
+    const po = await new MathSolverPage(page).goto();
     await po.calculatorButton(a).click();
     await po.calculatorButton("Multiply").click();
     await po.calculatorButton(b).click();
