@@ -6,8 +6,9 @@
     "build": "slidev build",
     "dev": "slidev --open",
     "export": "slidev export",
-    "test:playwright": "npx playwright test",
-    "test:cypress": "cypress open --e2e -b electron --config-file cypress.config.js"
+    "test:playwright-headless": "npx playwright test --workers=2",
+    "test:cypress-with-gui": "cypress open --e2e -b electron --config-file cypress.config.js",
+    "test:cypress-headless": "cypress run --e2e -b electron --config-file cypress.config.js"
   },
   "dependencies": {
     "@playwright/test": "^1.51.1",
