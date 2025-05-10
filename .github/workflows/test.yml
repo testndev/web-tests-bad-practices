@@ -39,4 +39,16 @@ jobs:
         run: npm ci
 
       - name: Run Playwright tests
-        run: npm run test:playwright-headless
+        run: npm run test:playwright-headless -- --trace=on
+
+      - name: Upload Playwright test report
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-test-report
+          path: playwright-report
+
+      - name: Upload Playwright traces
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-traces
+          path: traces
