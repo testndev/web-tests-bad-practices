@@ -14,10 +14,9 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
 
   // Opt out of parallel tests on CI.
-  workers: process.env.CI ? 1 : undefined,
+  workers: process.env.CI ? 1 : 4,
 
-  // Reporter to use
-  reporter: 'html',
+  // Removed duplicate reporter property
 
   expect: {
     timeout: 15 * 1000,
@@ -37,13 +36,11 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
   ],
-  // Run your local dev server before starting the tests.
-/*
-  webServer: {
-    command: 'npm run start',
-    url: 'http://localhost:3000',
-    reuseExistingServer: !process.env.CI,
-  },
 
-*/
+  reporter: [
+    ['html'],
+    ['junit', { outputFile: 'test-results/junit-report.xml' }],
+    ['list'],
+    ['dot']
+  ],
 });
