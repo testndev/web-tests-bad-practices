@@ -20,7 +20,6 @@
     "vue": "^3.5.13"
   },
   "devDependencies": {
-    "playwright-chromium": "^1.51.1",
     "typescript": "^5.8.3"
   }
 }
