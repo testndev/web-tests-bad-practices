@@ -141,7 +141,7 @@ hideInToc: true
 
 # Bad practice 3: dependency between tests
 
-<<< @/tests/03-independent-tests.spec.ts {*|4-6|8-10,12,14|17,20,21,23,25,28,30|33,36,38,40,42|*}{lines:true,maxHeight:'260px' }
+<<< @/tests/03-independent-tests.spec.ts {*|4-6|8-10,12,14|17,20,21,23,25,28,30}{lines:true,maxHeight:'260px' }
 
 <v-clicks>
 
