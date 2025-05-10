@@ -308,7 +308,7 @@ transition: fade
 
 <AppliesToAllFrameworks />
 
-<<< @/tests/08-bad-titles.spec.ts {*|9,10|27|44,49}{lines:true,maxHeight:'390px'}
+<<< @/tests/08-bad-titles.spec.ts {*|7,11,15|19,27|*}{lines:true,maxHeight:'390px'}
 
 ---
 layout: default
@@ -320,7 +320,7 @@ hideInToc: true
 
 <AppliesToAllFrameworks />
 
-<<< @/tests/08-better-titles.spec.ts {*|9,10|27|46,51}{lines:true,maxHeight:'280px'}
+<<< @/tests/08-better-titles.spec.ts {*|7,11,15,19,27|*}{lines:true,maxHeight:'280px'}
 
 <v-clicks>
 
@@ -369,7 +369,7 @@ Place common setup in `beforeAll()` or `beforeEach()` block.
 
 <AppliesToAllFrameworks />
 
-<<< @/tests/10-no-web-assertions.spec.ts {*|9}{lines:true}
+<<< @/tests/10-no-web-assertions.spec.ts {*|6,7}{lines:true}
 
 ---
 hideInToc: true
@@ -379,7 +379,7 @@ hideInToc: true
 
 <AppliesToAllFrameworks />
 
-<<< @/tests/10-web-assertions.spec.ts {*|8}{lines:true}
+<<< @/tests/10-web-assertions.spec.ts {*|6}{lines:true}
 
 <v-clicks>
 

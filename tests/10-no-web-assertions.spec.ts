@@ -1,10 +1,8 @@
 import { test, expect } from "@playwright/test";
-import MathSolverPage from "./pages/ms-math-solver.page";
+import CoffeePage from "./pages/coffee-pw.page";
 
-test(`Five video thumbnails should be visible 👎`, async ({ page }) => {
-  const po = await new MathSolverPage(page).goto();
-  await po.calcInput.pressSequentially("2+2");
-  await po.calculatorButton("Solve").click();
-  await page.waitForTimeout(5_000); // other bad practice
-  expect(await po.relatedVideosThumbnail().count()).toBe(4);
+test(`Nine coffees should be visible`, async ({ page }) => {
+  const coffeePage = await new CoffeePage(page).goto('slow');
+  await page.waitForTimeout(1000); // dirty wait for the page to load
+  await expect(await coffeePage.getCoffees().count()).toBe(9);
 });
