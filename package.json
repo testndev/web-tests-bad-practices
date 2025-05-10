@@ -6,12 +6,12 @@
     "build": "slidev build",
     "dev": "slidev --open",
     "export": "slidev export",
-    "test:playwright-headless": "npx playwright test --workers=2",
+    "test:playwright-headless": "npx playwright test --workers=4",
     "test:cypress-with-gui": "cypress open --e2e -b electron --config-file cypress.config.js",
     "test:cypress-headless": "cypress run --e2e -b electron --config-file cypress.config.js"
   },
   "dependencies": {
-    "@playwright/test": "^1.51.1",
+    "@playwright/test": "^1.52.0",
     "@slidev/cli": "^51.5.0",
     "@slidev/theme-bricks": "^0.25.0",
     "@slidev/theme-default": "latest",
