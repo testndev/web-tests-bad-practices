@@ -1,7 +1,7 @@
 // Example Cypress : bad practice 👎
-import coffeePage from "./pages/coffee.page"
+import coffeePage from "./pages/coffee-cy.page"
 
-describe("Tests de la liste des cafés disponibles", () => {
+describe("list of available coffees", () => {
 
   beforeEach(() => {
     cy.intercept("/list.json", { fixture: "list.json" });
