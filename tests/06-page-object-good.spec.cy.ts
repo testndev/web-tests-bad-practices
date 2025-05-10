@@ -1,5 +1,5 @@
 // Example Cypress : good practice 👍
-import coffeePage from "./pages/coffee.page"
+import coffeePage from "./pages/coffee-cy.page"
 
 describe("Tests Cypress", () => {
 

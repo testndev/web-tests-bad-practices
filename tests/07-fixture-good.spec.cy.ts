@@ -1,6 +1,6 @@
 // Example Cypress : good practice 👍
 
-import coffeePage from "./pages/coffee.page"
+import coffeePage from "./pages/coffee-cy.page"
 
 describe("Tests de la liste des cafés disponibles", () => {
 
