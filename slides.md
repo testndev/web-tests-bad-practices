@@ -1,6 +1,7 @@
 ---
 theme: default
 css: unocss
+colorSchema: dark
 background: /assets/first-slide-background.png
 title: (Cypress / Playwright) Web Tests bad practices
 class: text-center
