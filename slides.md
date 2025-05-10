@@ -253,7 +253,7 @@ hideInToc: true
 
 # Bad practice 6: repeat business logic
  
-<<< @/tests/pages/coffee.page.ts {*|6,9-23}{lines:true,maxHeight:'390px'}
+<<< @/tests/pages/coffee-cy.page.ts {*|6,9-23}{lines:true,maxHeight:'260px'}
 
 
 <v-clicks>
