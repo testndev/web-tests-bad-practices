@@ -6,7 +6,7 @@
     "build": "slidev build",
     "dev": "slidev --open",
     "export": "slidev export",
-    "test:playwright-headless": "npx playwright test --workers=4",
+    "test:playwright-headless": "npx playwright test",
     "test:cypress-with-gui": "cypress open --e2e -b electron --config-file cypress.config.js",
     "test:cypress-headless": "cypress run --e2e -b electron --config-file cypress.config.js"
   },
