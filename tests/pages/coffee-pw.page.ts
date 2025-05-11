@@ -26,7 +26,7 @@ export default class CoffeePage {
     return this.page.locator(':nth-child(3) > ul > li');
   }
 
-  getCoffeeByType = (coffeeTypeCode: string): Locator => {
+  getCoffee = (coffeeTypeCode: string): Locator => {
     return this.page.locator(`[data-test="${coffeeTypeCode}"]`)
   }
 
@@ -38,7 +38,7 @@ export default class CoffeePage {
     return this.page.locator(`[data-test="checkout"]`);
   }
 
-  getPromo = (): Locator => {
+  getPromoPopup = (): Locator => {
     return this.page.locator(`.promo`);
   }
 

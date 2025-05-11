@@ -130,7 +130,7 @@ Cypress  & Playwright provide intelligent auto-wait mechanisms. Use them instead
 
 <AppliesToAllFrameworks />
 
-<<< @/tests/03-dependent-tests.spec.ts {*|14,20-23}{lines:true,maxHeight:'390px'}
+<<< @/tests/03-dependent-tests.spec.ts {*|20-24,40|11,14-18}{lines:true,maxHeight:'390px'}
 
 ---
 hideInToc: true
@@ -140,7 +140,7 @@ hideInToc: true
 
 # Bad practice 3: dependency between tests
 
-<<< @/tests/03-independent-tests.spec.ts {*|4-6|8-10,12,14|17,20,21,23,25,28,30}{lines:true,maxHeight:'260px' }
+<<< @/tests/03-independent-tests.spec.ts {*|25-29|14-23}{lines:true,maxHeight:'260px' }
 
 <v-clicks>
 
