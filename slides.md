@@ -29,11 +29,9 @@ transition: fade-out
 
 We will present some bad practices (and other pitfalls to avoid) while designing and implementing your tests with Cypress or Playwright.
 
-We have selected 10 bad practices (of course many more exists).
+We have selected 10 bad practices (of course many more exist).
 
-Each one is illustrated with code examples, using [Cypress.io](https://www.cypress.io/) or [Playwright](https://playwright.dev/).
-
-Some are executable, targeting simple "[GitHub login](https://github.com/login)" page and more complex "[Microsoft Math Solver](https://mathsolver.microsoft.com/fr)".
+Each one is illustrated with (executable) code examples, using [Cypress.io](https://www.cypress.io/) or [Playwright](https://playwright.dev/).
 
 Some points will be specific to these frameworks, others will be common to any (Web) testing framework: [WebdriverIO](https://webdriver.io/), [Jest](https://jestjs.io/), [JUnit](https://junit.org/junit5/docs/current/user-guide/)...
 
